@@ -2,6 +2,7 @@ from flask import (
 	Flask, render_template, request, url_for, redirect
 )
 import nltk
+nltk.download('punkt')
 from nltk.stem.lancaster import LancasterStemmer
 import numpy as np
 import tflearn
