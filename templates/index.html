@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="bg">
+	<form class="form" method="post" action="{{ url_for('classify') }}">
+	    <h2>Text classification NLTK</h2>
+	    <textarea placeholder="Your text here.." rows="20" name="text" id="text" cols="100" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" required="true"></textarea>
+	  
+	    <input type="submit" value="Classify">
+	</form>
+
+	{% if result %}
+		<div class="result">
+			<h1>{{result}}</h1>
+		</div>
+	{% endif %}
+</div>
+
+</body>
+</html>
+
